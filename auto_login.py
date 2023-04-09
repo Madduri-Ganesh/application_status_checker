@@ -33,7 +33,7 @@ class ApplicationNotificationBot:
         return return_color
 
     def send_notification(self, message):
-        url = "https://hooks.slack.com/services/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"
+        url = "$slack_tocken"
 
         sentiment_color = self.check_sentiment(message)
 
@@ -75,9 +75,9 @@ class ApplicationNotificationBot:
 
     def main(self):
         # Replace these with the appropriate values for your website
-        url = 'https://applygrad.uic.edu/account/login?r=https%3a%2f%2fapplygrad.uic.edu%2fapply%2fstatus'
-        username = 'ganesh.chandra2908@gmail.com'
-        password = 'Unixperts@2000'
+        url = '$uni_login_portal'
+        username = '$username'
+        password = '$password'
 
         # Configure Selenium webdriver with the path to your Chrome driver executable
         chrome_options = webdriver.ChromeOptions()
@@ -111,7 +111,7 @@ class ApplicationNotificationBot:
         wait = WebDriverWait(driver, 10)
         # Replace with the URL that indicates the successful login
         wait.until(
-            EC.url_to_be('https://applygrad.uic.edu/apply/status'))
+            EC.url_to_be('$succes_page'))
 
         # Now that you are logged in, you can scrape the webpage
         # For example, you can find elements by their IDs, classes, or other selectors,
