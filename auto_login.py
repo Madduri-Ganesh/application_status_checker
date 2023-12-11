@@ -85,7 +85,7 @@ class ApplicationNotificationBot:
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         # Replace with your Chrome driver path
-        chrome_driver_path = r"C:\Users\mgane\Downloads\chromedriver_win32\chromedriver.exe"
+        chrome_driver_path = r"C:\Users\$chrome-drive-path"
         driver = webdriver.Chrome(chrome_driver_path, options=chrome_options)
 
         # Navigate to the login page
